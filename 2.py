@@ -14,4 +14,4 @@ for char in file:
 
 print histogram
 
-print re.findall(r"[a-z]", file)
+print "".join(re.findall(r"[a-z]", file))
