@@ -3,7 +3,7 @@ import os
 import urllib
 
 print urllib.urlopen(
-    "http://huge:file@www.pythonchallenge.com/pc/return/evil4.jpg?username=huge&password=file").readline()
+    "http://huge:file@www.pythonchallenge.com/pc/return/evil4.jpg").readline()
 
 if not os.path.exists('images'):
     os.makedirs('images')
