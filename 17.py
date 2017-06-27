@@ -1,8 +1,9 @@
 # http://www.pythonchallenge.com/pc/return/romance.html
-# from 4
+# from 4, 13
 import base64
 import bz2
 import cookielib
+import httplib2
 import re
 import xmlrpclib
 from urllib2 import HTTPHandler, HTTPCookieProcessor, build_opener, Request
@@ -42,3 +43,8 @@ print(bz2.decompress(res).decode())
 
 server = xmlrpclib.ServerProxy("http://www.pythonchallenge.com/pc/phonebook.php")
 print server.phone('Leopold')
+
+http = httplib2.Http()
+headers = {'Cookie': 'info=the flowers are on their way'}
+response, content = http.request("http://www.pythonchallenge.com/pc/stuff/violin.php", 'GET', headers=headers)
+print content
