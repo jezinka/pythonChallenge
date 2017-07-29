@@ -1,11 +1,11 @@
 # http://www.pythonchallenge.com/pc/def/linkedlist.php
 
-import urllib, re
+import re
+import urllib
 
 param = str(12345)
-status = 200
 
-while(True):
+while (True):
     try:
         url = "http://www.pythonchallenge.com/pc/def/linkedlist.php?nothing=" + param
         page_content = urllib.urlopen(url).read()
